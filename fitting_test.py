@@ -83,7 +83,7 @@ ax[1].text(-3, 1.3, f'训练误差: {train_loss2:.4f}')
 # plt.show()
 
 # 三. 过拟合(20次多项式)
-poly20 = PolynomialFeatures(degree=7)
+poly20 = PolynomialFeatures(degree=20)
 x_train3 = poly20.fit_transform(trainX)
 x_test3 = poly20.fit_transform(testX)
 print(x_train3.shape)
