@@ -21,7 +21,7 @@ X = np.linspace(-3, 3, 300).reshape(-1, 1)
 y = np.sin(X) + np.random.uniform(low=-0.5, high=0.5, size=300).reshape(-1, 1)
 print(X.shape, y.shape)
 
-# 画出散点图
+# 画出散点图 (3个子图)
 fig, ax = plt.subplots(1, 3, figsize=(15, 4))
 ax[0].scatter(X, y, c='y')
 ax[1].scatter(X, y, c='y')
@@ -88,6 +88,7 @@ x_train3 = poly20.fit_transform(trainX)
 x_test3 = poly20.fit_transform(testX)
 print(x_train3.shape)
 print(x_test3.shape)
+
 # 4. 训练模型
 model.fit(x_train3, trainY)
 
